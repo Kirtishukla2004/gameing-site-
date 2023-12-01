@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Antic&family=Kanit:wght@500&family=M+PLUS+1p:wght@100;300&family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+/* Configure Tailwind to use imported fonts */
+@layer base {
+  /* Antic */
+  html {
+    font-family: 'Antic', sans-serif;
+  }
+
+  /* Kanit 500 */
+  .kanit-500 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+  }
+
+  /* M PLUS 1p 100 */
+  .mplus-1p-100 {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 100;
+  }
+
+  /* M PLUS 1p 300 */
+  .mplus-1p-300 {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 300;
+  }
+
+  /* Open Sans */
+  .open-sans {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Roboto 300 */
+  .roboto-300 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+}
+
+body{
+  background-color: black;
+  color: #f4f4f4;
+}
