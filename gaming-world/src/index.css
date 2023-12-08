@@ -56,6 +56,25 @@ body{
   filter: drop-shadow(0 0 10px #d28ce4);
   animation: glow 2s alternate infinite;
 }
+/* Your existing CSS */
+
+.list:hover {
+  color: transparent;
+  text-shadow: none; /* Remove text-shadow on hover */
+  background-image: linear-gradient(to right, #8a2387, #e94057, #f27121);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.list.button {
+  transition: background-color 0.3s ease;
+}
+
+.list.button:hover {
+  background-image: linear-gradient(to right, #8a2387, #e94057, #f27121);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 
 @keyframes glow {
   0% {
@@ -65,6 +84,8 @@ body{
     filter: drop-shadow(0 0 25px #d28ce4);
   }
 }
+
+
 #stars {
   width: 1px;
   height: 1px;
@@ -629,4 +650,43 @@ body{
   to {
       transform: translateY(-2000px);
   }
+}
+
+.background{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.gallery{
+  display: flex;
+  left: calc(50%-330px);
+
+}
+
+.card{
+  position: relative;
+  left: 0px;
+  width: 350px;
+  height: 450px;
+  border-radius: 8px;
+  transition: 1s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 5px 12px black;
+}
+.card:not(:first-child){
+  margin-left: -45px;
+}
+.card:hover{
+  transform: translateY(-16px);
+  font-weight: bold;
+  cursor: pointer;
+}
+.card:hover ~ .card{
+  left: 55px;
+}
+.card img{
+  height: 450px;
+  object-fit: cover;
+  border-radius: 4px;
 }

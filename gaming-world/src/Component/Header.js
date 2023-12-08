@@ -22,7 +22,7 @@ class Header extends Component {
           <ul className="hidden lg:flex space-x-8 w-[339px] h-[76px] pl-[35px] p-[21px] rounded-[30px] border-2 border-solid">
             <li className="list">Home</li>
             <li className="list">Play</li>
-            <li className="list">Score</li>
+            <li className="list">Contact</li>
             <li className="list">Profile</li>
           </ul>
           <div>
@@ -51,7 +51,7 @@ class Header extends Component {
         >
           <li className="list">Home</li>
           <li className="list mt-4">Play</li>
-          <li className="list mt-4">Score</li>
+          <li className="list mt-4">Contact</li>
           <li className="list mt-4">Profile</li>
         </ul>
         <section class="wrapper ">
