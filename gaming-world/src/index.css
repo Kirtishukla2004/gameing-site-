@@ -42,7 +42,7 @@
 
 body{
   background-color: #040404;
- 
+ font-weight: bold;
   color: #f4f4f4;
 }
 .list{
@@ -51,6 +51,7 @@ body{
       0px 0px 80px #f4f4f4;
   
 }
+
 .image {
   filter: drop-shadow(0 0 10px #d28ce4);
   animation: glow 2s alternate infinite;
