@@ -16,7 +16,7 @@ class Play extends Component {
               <div className="gallery">
                 <div className="card">
                   <figure>
-                  <a href=""> <img
+                  <a href="/.Snake.js"> <img
                       src="./snake.png"
                       alt="snake"
                       className="border-8 border-solid list"
