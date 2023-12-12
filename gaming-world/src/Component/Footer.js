@@ -7,6 +7,7 @@ class Footer extends Component {
         <footer class="bg-gray-800 text-white text-center py-4 footer">
           <p>&copy; 2023 Sample Footer. All rights reserved.</p>
         </footer>
+       
       </>
     );
   }
