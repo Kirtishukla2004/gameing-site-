@@ -4,10 +4,9 @@ class Footer extends Component {
   render() {
     return (
       <>
-        <footer class="bg-gray-800 text-white text-center py-4 footer">
+        <footer class="bg-gray-800 text-white text-center py-4">
           <p>&copy; 2023 Sample Footer. All rights reserved.</p>
         </footer>
-       
       </>
     );
   }
