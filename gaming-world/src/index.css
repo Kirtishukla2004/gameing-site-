@@ -8,6 +8,7 @@
   /* Antic */
   html {
     font-family: "Antic", sans-serif;
+    height: 100vh;
   }
   .app{
     height: 100vh;
@@ -46,7 +47,9 @@
     font-weight: 300;
   }
 }
-
+ #root {
+  height: 100%;
+}
 body {
   background-color: #040404;
   font-weight: bold;
@@ -55,6 +58,22 @@ body {
   flex-direction: column;
   height: 100vh;
   
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: block;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important; 
+  height: 100%; 
+  margin-bottom: -50px; /* Equal to the footer height */
+} 
+
+.footer {
+  height: 50px; /* Set to the footer height */
 }
 
 .list {
@@ -663,7 +682,7 @@ body {
 .background {
   display: grid;
   place-items: center;
-  height: 100vh;
+ 
 }
 
 .gallery {
@@ -712,3 +731,10 @@ body {
     opacity: 1;
   }
 }
+@media (max-width: 1024px) { 
+  .gallery{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+ }
