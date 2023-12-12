@@ -1,17 +1,17 @@
 import Header from "./Component/Header";
 import "./App.css";
 import Play from "./Component/Play";
-import Footer from "./Footer";
+import Footer from "./Component/Footer";
 
 function App() {
   return (
     <>
-    <div className="app">
-    <Header />
-      <Play />
-
-      <Footer />
+  <div className="wrapper">
+      <Header/>
+    <Play/>
+   
     </div>
+    <Footer/>
      
     </>
   );

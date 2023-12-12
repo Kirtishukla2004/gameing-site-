@@ -13,7 +13,7 @@ class Play extends Component {
           </div>
           <play>
             <div className="background ">
-              <div className="gallery">
+              <div className="gallery ">
                 <div className="card">
                   <figure>
                   <a href="/.Snake.js"> <img
