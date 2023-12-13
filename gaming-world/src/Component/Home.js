@@ -19,15 +19,15 @@ class Header extends Component {
       <header className="py-4 pl-10 capitalize">
         <nav className="flex justify-between items-center text-lg">
           <img src="./logo.png" alt="Logo" className="w-20 h-16 image" />
-          <ul className="hidden lg:flex space-x-8 w-[339px] h-[76px] pl-[35px] p-[21px] rounded-[30px] border-2 border-solid">
+          <ul className="hidden lg:flex space-x-8 w-[339px] h-[76px] pl-[35px] p-[21px] rounded-[30px] border-2 border- cursor-pointer">
             <li className="list">Home</li>
             <li className="list">Play</li>
             <li className="list">Contact</li>
             <li className="list">Profile</li>
           </ul>
           <div>
-            <button className="px-4 py-2 text-white mr-[40px] rounded-[9px] border-2 border-solid list">
-              Login
+            <button className="px-4 py-2 text-white mr-[40px] rounded-[9px] border-2 border-solid list cursor-pointer list">
+             <span className="button-text">Login</span>
             </button>
           </div>
           <div
@@ -54,11 +54,7 @@ class Header extends Component {
           <li className="list mt-4">Contact</li>
           <li className="list mt-4">Profile</li>
         </ul>
-        <section class="wrapper ">
-          <div id="stars"></div>
-          <div id="stars2"></div>
-          <div id="stars3"></div>
-        </section>
+       
         <div className=" lg:flex ">
           <h1 className="text-center lg:text-left mr-2 text-[35px]  h-[247px] w-[690px]  mt-[138px] float-left max-sm:hidden max-md:hidden bg-gradient-to-r from-custom_purple via-custom_gold to-custom_blue bg-clip-text text-transparent ">
             A Deep Dive Into The Gaming Virtual World
