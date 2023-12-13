@@ -1,24 +1,22 @@
-import Header from "./Component/Home";
+import Home from "./Component/Home";
 import "./App.css";
 import Play from "./Component/Play";
 import Footer from "./Component/Footer";
 import LoginForm from "./Component/LoginForm";
-import { useContext, useEffect } from 'react';
+
 import Snake from "./Component/Snake";
 
-
-
-
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-
-     <Header/>
-   
-     <Footer/>
- 
-    </>
+    <div>
+      <Home/>
+      <Routes>
+        <Route path="/" Component={Home} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
