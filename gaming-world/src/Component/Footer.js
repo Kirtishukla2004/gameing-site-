@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <>
         <footer className="bg-gray-800 text-white text-center py-4 mt-[62px]">
-          <p>&copy; 2023 Sample Footer. All rights reserved.</p>
+          <p>&copy; Welcome to the gaming world </p>
         </footer>
       </>
     );

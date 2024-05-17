@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { withAuth0 } from '@auth0/auth0-react';
+import { withAuth0 } from "@auth0/auth0-react";
+
 class Header extends Component {
   constructor(props) {
-
     super(props);
     this.state = {
       dropdownVisible: false,
@@ -15,15 +15,15 @@ class Header extends Component {
       dropdownVisible: !prevState.dropdownVisible,
     }));
   };
-  handleLogin = () => {
-    const {loginWithRedirect } = this.props.auth0;
-  
-    
-    loginWithRedirect();
-  
+
+  handleLogout = () => {
+    const { logout } = this.props.auth0;
+    logout({ returnTo: window.location.origin });
   };
-  state = {};
+
   render() {
+    const { isAuthenticated } = this.props.auth0;
+
     return (
       <>
         <div className="mt-[2rem]">
@@ -31,28 +31,32 @@ class Header extends Component {
             <img src="./logo.png" alt="Logo" className="w-20 h-16 image" />
             <ul className="hidden lg:flex space-x-8 w-[339px] h-[76px] pl-[35px] p-[21px] rounded-[30px] border-2 border- cursor-pointer">
               <li className="list">
-                <Link to="/home">Home </Link>
+                <Link to="/home">Home</Link>
               </li>
               <li className="list">
-                <Link to="/play">Play </Link>
+                <Link to="/play">Play</Link>
               </li>
               <li className="list">
-                {" "}
-                <Link to="/contact">Contact</Link>
+                <Link to="/profile">Profile</Link>
               </li>
-              <li className="list">
-                <Link to="/profile">Profile </Link>
-              </li>
+              {isAuthenticated ? (
+                <li className="list">
+                  <button
+                    className="text-white cursor-pointer list"
+                    onClick={this.handleLogout}
+                  >
+                    Logout
+                  </button>
+                </li>
+              ) : (
+                <li className="list">
+                  <Link to="/login">Login</Link>
+                </li>
+              )}
             </ul>
-            <div>
-              <button className="px-4 py-2 text-white mr-[40px] rounded-[9px] border-2 border-solid list cursor-pointer list "onClick={this.handleLogin}>
-                <span className="button-text">
-                  <Link to="/login">Login </Link>
-                </span>
-              </button>
-            </div>
+            <div></div>
             <div
-              className="text-white toggle-button cursor-pointer lg:hidden list"
+              className="text-white toggle-button cursor-pointer lg:hidden  list mt-4"
               onClick={this.toggleDropdown}
             >
               <svg
@@ -70,10 +74,25 @@ class Header extends Component {
               this.state.dropdownVisible ? "block lg:hidden" : "hidden"
             }`}
           >
-            <li className="list"> <Link to="/home">Home </Link></li>
-            <li className="list mt-4"> <Link to="/play">Play </Link></li>
-            <li className="list mt-4"> <Link to="/contact">Contact</Link></li>
-            <li className="list mt-4"><Link to="/profile">Profile </Link></li>
+            <li className="list">
+              <Link to="/home">Home</Link>
+            </li>
+            <li className="list mt-4">
+              <Link to="/play">Play</Link>
+            </li>
+            <li className="list mt-4">
+              <Link to="/profile">Profile</Link>
+            </li>
+            {isAuthenticated ? (
+              <li>
+                <button
+                  className="text-white cursor-pointer list mt-4"
+                  onClick={this.handleLogout}
+                >
+                  Logout
+                </button>
+              </li>
+            ) : null}
           </ul>
         </div>
       </>

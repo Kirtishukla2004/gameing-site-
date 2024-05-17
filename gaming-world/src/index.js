@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { Auth0Provider } from '@auth0/auth0-react';
+import { Auth0Provider } from "@auth0/auth0-react";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Auth0Provider
-      domain="http://dev-rmfsp47gyb8o1e4p.us.auth0.com"
-      clientId="bWCmvhYUoXXWMb342M3ALoqe7VXLKst3"
+      domain="dev-epog3j4ig2vb38yr.us.auth0.com"
+      clientId="oFA4zwaqNd1DXsqcmJZs6knTsOpKNpr0"
       authorizationParams={{
         redirect_uri: window.location.origin,
       }}

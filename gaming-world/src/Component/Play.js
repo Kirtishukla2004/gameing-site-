@@ -27,7 +27,7 @@ class Play extends Component {
                 </div>
                 <div className="card">
                   <figure>
-                    <Link to="/menja">
+                    <Link to="/memorygame">
                     <img
                       src="./menja.png"
                       alt="fino"
