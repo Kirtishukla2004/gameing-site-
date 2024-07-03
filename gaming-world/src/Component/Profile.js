@@ -11,12 +11,13 @@ class Profile extends React.Component {
           <div>
             <h2>Welcome, {user.nickname}!</h2>
             <p>Email: {user.email}</p>
-            {/* Add more user details as needed */}
+            {/* <img src={user.picture} alt=""/> */}
+           {console.log("user",user)}
           </div>
         ) : (
           <div>
             <h2>Please log in to view your profile.</h2>
-            {/* You can add a link to the login page here if needed */}
+            
           </div>
         )}
       </div>

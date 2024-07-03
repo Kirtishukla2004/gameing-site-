@@ -84,15 +84,19 @@ class Header extends Component {
               <Link to="/profile">Profile</Link>
             </li>
             {isAuthenticated ? (
-              <li>
+              <li className="list">
                 <button
-                  className="text-white cursor-pointer list mt-4"
+                  className="text-white cursor-pointer list"
                   onClick={this.handleLogout}
                 >
                   Logout
                 </button>
               </li>
-            ) : null}
+            ) : (
+              <li className="list">
+                <Link to="/login">Login</Link>
+              </li>
+            )}
           </ul>
         </div>
       </>
