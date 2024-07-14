@@ -1,0 +1,24 @@
+/* /* .riya:hover {
+  background-color: aqua;
+}
+section :first-child{
+    color: blue;
+}
+section :last-child:hover{
+color: brown;
+}
+section  :nth-child(3){
+color: yellow;} 
+
+section :first-of-type{
+color: rgb(210, 169, 80);*/
+
+section ::selection{
+  color: rgba(230, 30, 140, 0.855);
+  background-color: rgb(162, 171, 255);
+}
+
+section ::first-letter{
+  color: blue;
+  font-size: xx-large;
+}
