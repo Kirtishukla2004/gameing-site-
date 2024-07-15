@@ -4,14 +4,14 @@ products = [
         "title": "Sample Product 1",
         "description": "This is a great product.",
         "price": 29.99,
-        "image": "/images/sample1.jpg"
+       
     },
     {
         "id": "2",
         "title": "Sample Product 2",
         "description": "This is another great product.",
         "price": 39.99,
-        "image": "/images/sample2.jpg"
+        
     }
 ]
 
