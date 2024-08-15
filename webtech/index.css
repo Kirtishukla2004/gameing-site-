@@ -1,24 +1,24 @@
-/* /* .riya:hover {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 512px;
+  height: 335px;
+  background-color: rgb(228, 228, 83);
+  display: grid;
+  grid-template-columns:repeat(3,150px);
+  display: flex;
+ 
+  
+}
+p{
+  height: 100px;
+  width: 100px;
   background-color: aqua;
-}
-section :first-child{
-    color: blue;
-}
-section :last-child:hover{
-color: brown;
-}
-section  :nth-child(3){
-color: yellow;} 
+  border: solid 2px;
+  flex-basis: 100px;
 
-section :first-of-type{
-color: rgb(210, 169, 80);*/
-
-section ::selection{
-  color: rgba(230, 30, 140, 0.855);
-  background-color: rgb(162, 171, 255);
-}
-
-section ::first-letter{
-  color: blue;
-  font-size: xx-large;
 }
