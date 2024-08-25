@@ -1,23 +1,19 @@
-# app/routes.py
-
-from flask import Blueprint, jsonify
-from .products import get_all_products, get_product_by_id
+from flask import Blueprint, request, jsonify
+from .models import Product
 
 main = Blueprint('main', __name__)
 
-@main.route('/', methods=['GET'])
-def home():
-    return jsonify({"message": "Welcome to the Amazon Clone API"}), 200
+@main.route('/search', methods=['GET'])
+def search_products():
+    query = request.args.get('q')
+    if not query:
+        return jsonify([])
 
-@main.route('/products', methods=['GET'])
-def get_products():
-    products = get_all_products()
-    return jsonify(products), 200
+    products = Product.query.filter(Product.title.ilike(f"%{query}%")).all()
 
-@main.route('/products/<int:product_id>', methods=['GET'])
-def get_product(product_id):
-    product = get_product_by_id(product_id)
-    if product:
-        return jsonify(product), 200
-    else:
-        return jsonify({"error": "Product not found"}), 404
+    products_json = [
+        {"id": product.id, "title": product.title, "description": product.description, "price": product.price}
+        for product in products
+    ]
+
+    return jsonify(products_json)
