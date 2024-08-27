@@ -6,7 +6,7 @@ main = Blueprint('main', __name__)
 # Database connection setup
 def get_db_connection():
     conn = pyodbc.connect(
-        'DRIVER={ODBC Driver 17 for SQL Server};'
+        'DRIVER={SQL Server};'
         'SERVER=your_server_name;'
         'DATABASE=your_database_name;'
         'UID=your_username;'
