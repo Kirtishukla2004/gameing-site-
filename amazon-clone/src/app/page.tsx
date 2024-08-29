@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
+import { title } from "process";
 
 const HomePage = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+ 
 
   const handleSearch = async () => {
     try {
@@ -19,7 +21,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-      <h1 className="text-3xl font-bold mb-8">Product Search</h1>
+      <h1 className="text-3xl font-bold mb-8 text-black">Product Search</h1>
       <div className="w-full max-w-md">
         <input
           type="text"
